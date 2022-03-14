@@ -1,0 +1,163 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div .demo {
+}
+
+.name.name2 {
+}
+
+.neme1 .name2 {
+}
+
+div.demo {
+}
+#id {
+}
+
+/* 并列选择器 */
+div,
+p {
+}
+
+/* 父子选择器 */
+div p {
+}
+/* 直接子元素选择器 */
+div > p {
+}
+
+/* 直接兄弟选择器 */
+div + p {
+}
+
+/* 兄弟选择器 */
+div ~ ul {
+}
+
+/* 属性选择器 */
+[target] {
+}
+
+[class="black"] {
+}
+
+[target="_blank"] {
+}
+
+[title~="flower"] {
+}
+[lang|="en"] {
+}
+
+a[href^="https"] {
+}
+
+a[href*="w3schools"] {
+}
+
+/* 伪类选择器 */
+/*
+  * 标签元素后面带 : 的，就是伪类
+  *
+ */
+
+/* E:first-child 匹配父元素中的第一个子元素E */
+p:first-child {
+  box-sizing: border-box;
+}
+
+/* 
+ E:nth-child(2) 匹配父元素中的第2个子元素E 
+  E:nth-child(n) 匹配父元素中的第0,1，2,3.。。个子元素E（n从0递增）
+ E:nth-child(n+1) 匹配父元素中的第1,2,3.。。个子元素E （n从0递增）
+ E:nth-child(2n+1) 匹配父元素中的第1,3,5,7，。。。2n+1个子元素E 
+  E:nth-child(even) 匹配父元素中所有偶数的子元素E 
+  E:nth-child(odd) 匹配父元素中所有奇数的子元素E 
+ */
+
+/* E:nth-child(1) 会把所有的盒子排列序号
+ 执行的时候首先看 ：nth-child(1) 之后看这个元素是否是E元素，如果不是则不生效
+ 
+ */
+div p:nth-child(1) {
+}
+div p:nth-of-type(1) {
+}
+
+div:focus {
+}
+
+/* 
+ E:first-of-type 匹配父元素中的第2个子元素E 
+  E:nth-of-type(n) 匹配父元素中的第0,1，2,3.。。个子元素E（n从0递增）
+ E:nth-of-type(n+1) 匹配父元素中的第1,2,3.。。个子元素E （n从0递增）
+ E:nth-of-type(2n+1) 匹配父元素中的第1,3,5,7，。。。2n+1个子元素E 
+  E:nth-of-type(even) 匹配父元素中所有偶数的子元素E 
+  E:nth-of-type(odd) 匹配父元素中所有奇数的子元素E 
+ */
+/* E:nth-of-type(1) 会把指定元素（元素E）的盒子排列序号
+  执行的时候首先看  指定的E元素  之后回去看  :nth-of-type(1) 第几个孩子
+
+ */
+
+/**
+区别：
+  1. E:nth-child 对父元素里面所有孩子排序选择（序号是固定的） 先找到第几个孩子，然后看看是否和E匹配
+  2. E:nth-of-type 对父元素里面指定子元素进行排序选择，先去匹配E,然后再根据E元素找第几个孩子
+
+
+*/
+
+/** 伪元素选择器 */
+/**
+  标签元素后面带 :: 的，就是伪元素
+  伪元素其实是不存在的元素
+*/
+div::before {
+  content: "";
+  display: block;
+}
+div::after {
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  /* font-size: 0px; */
+}
+
+input:focus {
+  background-color: red;
+}
+
+#tt {
+  /* margin: auto  0; */
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+}
+
+#tt {
+  /*  怪异盒模型 */
+  /* 
+  * 盒子大小 == widht + padding + border
+  */
+  box-sizing: border-box;
+
+  /* 标准盒模型 */
+  /* 
+  * 盒子大小 == width（盒子的内容 + padding + border）
+  * 注意： 当盒子的padding增大或者border增大，那么盒子的内容的大小就会变小
+  *        padding与border不要超过width宽度
+  */
+  box-sizing: content-box;
+}
+
+.son {
+  width: calc(100% - 30px);
+}

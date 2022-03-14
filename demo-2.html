@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ 
+    .float {
+      float: left;
+      width: 200px;
+      height: 200px;
+    }
+    /* div:first-child {
+      width: 100%;
+      margin: 0 auto;
+      background-color: red;
+      margin-bottom: 100px;
+    }
+    div.pink {
+      background-color: pink;
+      margin-top: 50px;
+    } */
+    /* .clearFloat::after {
+      display: block;
+      clear: both;
+      content: '';
+    } */
+    .clearFloat div {
+      /* overflow: hidden;
+       */
+       width: 200px;
+       height: 200px;
+       
+    }
+    div.yellow {
+      background-color: yellow;
+      height: 400px;
+      float: left;
+    }
+    div.pink {
+      background-color: pink;
+    
+    }
+    div.red {
+      background-color: red;
+      height: 300px;
+      
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="clearFloat">
+    <div class="yellow name1">2312</div>
+    <div class="pink  name2">232</div>
+    <div class="red name3">cc</div>
+  </div>
+    <!-- <div>fdsfdsf</div> -->
+</body>
+</html>

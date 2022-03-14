@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .warp {
+      display: flex;
+      /* 设置主轴的方向 （row | row-reverse | column | column-reverse）*/
+      flex-direction: row;  
+      /* 设置主轴上的子元素排列方式 
+
+        flex-start（默认值）：左对齐
+        flex-end：右对齐
+        center： 居中
+        space-between：两端对齐，项目之间的间隔都相等。
+        space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+        
+      */
+      justify-content: center;
+    }
+    .warp div {
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="warp">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
